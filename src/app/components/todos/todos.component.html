@@ -1,0 +1,13 @@
+<div class="add-todos">
+  <p class="warning">* Click on Submit Button to add to the List.</p>
+  <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+</div>
+<div class="content-list">
+  <p class="warning">* Select Checkbox to Change from InProgress to Completed Status</p>
+  <app-todo-item 
+    *ngFor="let todo of todos" 
+    [todo]="todo"
+    (deleteTodo)="deleteTodo($event)"
+    >
+  </app-todo-item>
+</div>

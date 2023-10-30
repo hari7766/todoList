@@ -1,0 +1,8 @@
+.content-list, .add-todos{
+    margin: 2em 20em;
+}
+
+.warning{
+    font-size: 13px;
+    color: #e77415
+}

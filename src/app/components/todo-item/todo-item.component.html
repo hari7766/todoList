@@ -1,0 +1,22 @@
+<div [ngClass]="setClasses()">
+  <div class="tbl-container">
+    <input
+      (change)="onToggle(todo)"
+      type="checkbox"
+      id="{{ todo.id }}"
+      [checked]="todo.completed"
+    />
+    <div class="todo-col">
+      <label for="{{ todo.name }}">
+        {{ todo.name }}
+      </label>
+    </div>
+    
+    <div>
+    <label for="{{ todo.status }}">
+      {{ todo.status ? todo.status : 'InProgress' }}
+    </label>
+  </div>
+    <button (click)="onDelete(todo)" class="del">X</button>
+  </div>
+</div>
